@@ -1,24 +1,15 @@
-
-import js from "@eslint/js";
+// eslint.config.mjs
 import next from "@next/eslint-plugin-next";
 
 export default [
-  // Next.js core web vitals configuration
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     plugins: {
-      next
+      next,
     },
     rules: {
       ...next.configs.recommended.rules,
-      ...next.configs['core-web-vitals'].rules,
-    }
+      ...next.configs["core-web-vitals"].rules,
+    },
   },
-  
-  // Additional 
-  {
-    rules: {
-      // your custom rules here
-    }
-  }
 ];
